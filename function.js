@@ -80,3 +80,12 @@ let computerMove = '';
 
 return computerMove;
 }
+
+const reset = document.getElementById("resets").addEventListener('click', function resetAll(){
+     score.wins = 0;
+     score.losses = 0;
+     score.ties = 0;
+     document.getElementById('moves').innerHTML="";
+     localStorage.removeItem('score');
+     updateScoreElement();
+});
